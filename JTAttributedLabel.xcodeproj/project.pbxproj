@@ -7,13 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A211FB71698D91200196C09 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A211FB61698D91200196C09 /* TTTAttributedLabel.m */; };
 		1A211FB91698D93300196C09 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A211FB81698D93300196C09 /* CoreText.framework */; };
-		1A211FBC1698DAB400196C09 /* JTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A211FBB1698DAB400196C09 /* JTAttributedLabel.m */; };
-		1A3712561698E17F005A3973 /* JTParagraphStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3712551698E17F005A3973 /* JTParagraphStyle.m */; };
-		1A37125A1698E485005A3973 /* UINibDecoderProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3712591698E485005A3973 /* UINibDecoderProxy.m */; };
 		1A3712641698F026005A3973 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3712631698F026005A3973 /* QuartzCore.framework */; };
-		1A72008F169964AB00F6E8BD /* NSAttributedString+JTiOS5Compatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A72008E169964AB00F6E8BD /* NSAttributedString+JTiOS5Compatibility.m */; };
 		1ABAF56A1698D6C9006BC241 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABAF5691698D6C9006BC241 /* UIKit.framework */; };
 		1ABAF56C1698D6C9006BC241 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABAF56B1698D6C9006BC241 /* Foundation.framework */; };
 		1ABAF56E1698D6C9006BC241 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABAF56D1698D6C9006BC241 /* CoreGraphics.framework */; };
@@ -30,6 +25,10 @@
 		1ABAF5901698D6C9006BC241 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABAF56B1698D6C9006BC241 /* Foundation.framework */; };
 		1ABAF5981698D6C9006BC241 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1ABAF5961698D6C9006BC241 /* InfoPlist.strings */; };
 		1ABAF59B1698D6C9006BC241 /* JTAttributedLabelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAF59A1698D6C9006BC241 /* JTAttributedLabelTests.m */; };
+		1AE59FEE16998F1D005F72C5 /* JTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE59FE616998F1D005F72C5 /* JTAttributedLabel.m */; };
+		1AE59FEF16998F1D005F72C5 /* JTParagraphStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE59FE816998F1D005F72C5 /* JTParagraphStyle.m */; };
+		1AE59FF016998F1D005F72C5 /* NSAttributedString+JTiOS5Compatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE59FEA16998F1D005F72C5 /* NSAttributedString+JTiOS5Compatibility.m */; };
+		1AE59FF116998F1D005F72C5 /* UINibDecoderProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE59FED16998F1D005F72C5 /* UINibDecoderProxy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,18 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1A211FB51698D91200196C09 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
-		1A211FB61698D91200196C09 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
 		1A211FB81698D93300196C09 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		1A211FBA1698DAB400196C09 /* JTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTAttributedLabel.h; sourceTree = "<group>"; };
-		1A211FBB1698DAB400196C09 /* JTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTAttributedLabel.m; sourceTree = "<group>"; };
-		1A3712541698E17F005A3973 /* JTParagraphStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTParagraphStyle.h; sourceTree = "<group>"; };
-		1A3712551698E17F005A3973 /* JTParagraphStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTParagraphStyle.m; sourceTree = "<group>"; };
-		1A3712581698E485005A3973 /* UINibDecoderProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINibDecoderProxy.h; sourceTree = "<group>"; };
-		1A3712591698E485005A3973 /* UINibDecoderProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINibDecoderProxy.m; sourceTree = "<group>"; };
 		1A3712631698F026005A3973 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		1A72008D169964AB00F6E8BD /* NSAttributedString+JTiOS5Compatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+JTiOS5Compatibility.h"; sourceTree = "<group>"; };
-		1A72008E169964AB00F6E8BD /* NSAttributedString+JTiOS5Compatibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+JTiOS5Compatibility.m"; sourceTree = "<group>"; };
 		1ABAF5651698D6C8006BC241 /* JTAttributedLabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JTAttributedLabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ABAF5691698D6C9006BC241 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1ABAF56B1698D6C9006BC241 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -77,6 +66,14 @@
 		1ABAF5971698D6C9006BC241 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1ABAF5991698D6C9006BC241 /* JTAttributedLabelTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTAttributedLabelTests.h; sourceTree = "<group>"; };
 		1ABAF59A1698D6C9006BC241 /* JTAttributedLabelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTAttributedLabelTests.m; sourceTree = "<group>"; };
+		1AE59FE516998F1D005F72C5 /* JTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTAttributedLabel.h; sourceTree = "<group>"; };
+		1AE59FE616998F1D005F72C5 /* JTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTAttributedLabel.m; sourceTree = "<group>"; };
+		1AE59FE716998F1D005F72C5 /* JTParagraphStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTParagraphStyle.h; sourceTree = "<group>"; };
+		1AE59FE816998F1D005F72C5 /* JTParagraphStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTParagraphStyle.m; sourceTree = "<group>"; };
+		1AE59FE916998F1D005F72C5 /* NSAttributedString+JTiOS5Compatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+JTiOS5Compatibility.h"; sourceTree = "<group>"; };
+		1AE59FEA16998F1D005F72C5 /* NSAttributedString+JTiOS5Compatibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+JTiOS5Compatibility.m"; sourceTree = "<group>"; };
+		1AE59FEC16998F1D005F72C5 /* UINibDecoderProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINibDecoderProxy.h; sourceTree = "<group>"; };
+		1AE59FED16998F1D005F72C5 /* UINibDecoderProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINibDecoderProxy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,19 +105,8 @@
 		1A211FB21698D8EB00196C09 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				1A211FB41698D91200196C09 /* TTTAttributedLabel */,
 			);
 			path = Libs;
-			sourceTree = "<group>";
-		};
-		1A211FB41698D91200196C09 /* TTTAttributedLabel */ = {
-			isa = PBXGroup;
-			children = (
-				1A211FB51698D91200196C09 /* TTTAttributedLabel.h */,
-				1A211FB61698D91200196C09 /* TTTAttributedLabel.m */,
-			);
-			name = TTTAttributedLabel;
-			path = TTTAttributedLabel/TTTAttributedLabel;
 			sourceTree = "<group>";
 		};
 		1ABAF55A1698D6C8006BC241 = {
@@ -159,20 +145,14 @@
 		1ABAF56F1698D6C9006BC241 /* JTAttributedLabel */ = {
 			isa = PBXGroup;
 			children = (
+				1AE59FE416998F1D005F72C5 /* JTAttributedLabel */,
+				1AE59FEB16998F1D005F72C5 /* JTAttributedLabelDebug */,
 				1ABAF5781698D6C9006BC241 /* AppDelegate.h */,
 				1ABAF5791698D6C9006BC241 /* AppDelegate.m */,
 				1ABAF5811698D6C9006BC241 /* MainStoryboard.storyboard */,
 				1ABAF5841698D6C9006BC241 /* ViewController.h */,
 				1ABAF5851698D6C9006BC241 /* ViewController.m */,
 				1ABAF5701698D6C9006BC241 /* Supporting Files */,
-				1A211FBA1698DAB400196C09 /* JTAttributedLabel.h */,
-				1A211FBB1698DAB400196C09 /* JTAttributedLabel.m */,
-				1A3712541698E17F005A3973 /* JTParagraphStyle.h */,
-				1A3712551698E17F005A3973 /* JTParagraphStyle.m */,
-				1A72008D169964AB00F6E8BD /* NSAttributedString+JTiOS5Compatibility.h */,
-				1A72008E169964AB00F6E8BD /* NSAttributedString+JTiOS5Compatibility.m */,
-				1A3712581698E485005A3973 /* UINibDecoderProxy.h */,
-				1A3712591698E485005A3973 /* UINibDecoderProxy.m */,
 			);
 			path = JTAttributedLabel;
 			sourceTree = "<group>";
@@ -208,6 +188,28 @@
 				1ABAF5961698D6C9006BC241 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1AE59FE416998F1D005F72C5 /* JTAttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				1AE59FE516998F1D005F72C5 /* JTAttributedLabel.h */,
+				1AE59FE616998F1D005F72C5 /* JTAttributedLabel.m */,
+				1AE59FE716998F1D005F72C5 /* JTParagraphStyle.h */,
+				1AE59FE816998F1D005F72C5 /* JTParagraphStyle.m */,
+				1AE59FE916998F1D005F72C5 /* NSAttributedString+JTiOS5Compatibility.h */,
+				1AE59FEA16998F1D005F72C5 /* NSAttributedString+JTiOS5Compatibility.m */,
+			);
+			path = JTAttributedLabel;
+			sourceTree = "<group>";
+		};
+		1AE59FEB16998F1D005F72C5 /* JTAttributedLabelDebug */ = {
+			isa = PBXGroup;
+			children = (
+				1AE59FEC16998F1D005F72C5 /* UINibDecoderProxy.h */,
+				1AE59FED16998F1D005F72C5 /* UINibDecoderProxy.m */,
+			);
+			path = JTAttributedLabelDebug;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,11 +325,10 @@
 				1ABAF5761698D6C9006BC241 /* main.m in Sources */,
 				1ABAF57A1698D6C9006BC241 /* AppDelegate.m in Sources */,
 				1ABAF5861698D6C9006BC241 /* ViewController.m in Sources */,
-				1A211FB71698D91200196C09 /* TTTAttributedLabel.m in Sources */,
-				1A211FBC1698DAB400196C09 /* JTAttributedLabel.m in Sources */,
-				1A3712561698E17F005A3973 /* JTParagraphStyle.m in Sources */,
-				1A37125A1698E485005A3973 /* UINibDecoderProxy.m in Sources */,
-				1A72008F169964AB00F6E8BD /* NSAttributedString+JTiOS5Compatibility.m in Sources */,
+				1AE59FEE16998F1D005F72C5 /* JTAttributedLabel.m in Sources */,
+				1AE59FEF16998F1D005F72C5 /* JTParagraphStyle.m in Sources */,
+				1AE59FF016998F1D005F72C5 /* NSAttributedString+JTiOS5Compatibility.m in Sources */,
+				1AE59FF116998F1D005F72C5 /* UINibDecoderProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,11 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "TTTAttributedLabel.h"
-#import "JTAttributedLabel.h"
-#import "JTParagraphStyle.h"
-#import <QuartzCore/QuartzCore.h>
-#import "NSAttributedString+JTiOS5Compatibility.h"
 
 @interface ViewController ()
 
