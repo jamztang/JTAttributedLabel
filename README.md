@@ -16,7 +16,7 @@ The first problem for me is how we can extract the NSAttributedString out from U
 
 `NSCoder` is not like `NSDictionary` where we can simply use NSLog to print out the encapsulated properties. Thanks to [@nicklockwood](https://twitter.com/nicklockwood/status/287115589527408640) hints on using `NSProxy`, it is simple enough for me to create a straight forward [NSProxy subclass](https://gist.github.com/4466616) to wrap around the `NSCoder` object and see how iOS 6 deal with it. And there I discover the "UIAttributedText" key.
 
-Having the attributedText in hand I immediately tried to assign it into those rich text UILabel libraries. I thought it was that simple but it cause mysterous crashes in the CoreText APIs. After some investigaion I realized the underlying implementation of the NSAttributedString is slightly different. iOS 6 seems to include a new class `NSParagraphStyle` that holds the text attributes.By borrowing the techique from [@hlfcoding in his RRAutoLayout introduction][1], I am able to implement the `NSParagraphStyle` conditionally in runtime like so:
+Having the attributedText in hand I immediately tried to assign it into those rich text UILabel libraries. I thought it was that simple but then it causes mysterous crashes in the CoreText APIs. After some investigaion I realized the underlying implementation of the NSAttributedString is slightly different. iOS 6 seems to include a new class `NSParagraphStyle` that holds the text attributes.By borrowing the techique from [@hlfcoding in his RRAutoLayout introduction][1], I am able to implement the `NSParagraphStyle` conditionally in runtime like so:
 
 ```objective-c
 if( ! NSClassFromString(@"NSParagraphStyle") ){
@@ -34,9 +34,9 @@ Usage
 
 Drop all header and implementation files in JTAttributedLabel/JTAttributedLabel to your project.
 
-In your Interface Builder, drag a UILabel and specify its subclass to JTAttributedLabel or JTAutoLabel.
+In your Interface Builder, drag in a UILabel and specify its subclass to `JTAttributedLabel` or `JTAutoLabel`.
 
-Choosing `JTAutoLabel` as a subclass in iOS 6 will automatically use the default `UILabel` which the system fully supports iOS 6 provided attributes.
+The difference between `JTAttributedLabel` and `JTAutoLabel` is the latter one will automatically use iOS 6 default `UILabel` class for best displaying result.
 
 Requirements
 ------------
@@ -47,8 +47,8 @@ Requirements
 Demo
 ----
 
-<img src=https://github.com/mystcolor/JTAttributedText/raw/master/demo1.png></img>
-<img src=https://github.com/mystcolor/JTAttributedText/raw/master/knownissue.png></img>
+<img src=https://github.com/mystcolor/JTAttributedLabel/raw/master/demo1.png></img>
+<img src=https://github.com/mystcolor/JTAttributedLabel/raw/master/knownissue.png></img>
 
 
 Known Issues
@@ -60,10 +60,10 @@ Known Issues
 - Text are not interactable, which is probably a good custom feature but I don't have any plans to support it at the moment.
 
 
-If you're not ready to drop iOS 5...
-------------------------------------
+If you're also like me who are not ready to drop iOS 5 (yet)
+------------------------------------------------------------
 
-There are some also some really popular libraries that bring back iOS 6 goodies for iOS 5.
+There are some also some really popular libraries that brought back iOS 6 goodies for iOS 5.
 - [RRAutoLayout][1]
 - [PSTCollectionView](https://github.com/steipete/PSTCollectionView) 
 
