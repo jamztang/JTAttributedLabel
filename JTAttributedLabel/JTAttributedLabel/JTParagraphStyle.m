@@ -1,10 +1,10 @@
-//
-//  JTParagraphStyle.m
-//  JTAttributedLabel
-//
-//  Created by james on 6/1/13.
-//  Copyright (c) 2013 Mystcolor. All rights reserved.
-//
+/*
+ * This file is part of the JTAttributedLabel package.
+ * (c) James Tang <mystcolor@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 #import "JTParagraphStyle.h"
 #import <CoreText/CoreText.h>
