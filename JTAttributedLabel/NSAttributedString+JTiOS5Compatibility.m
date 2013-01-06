@@ -29,6 +29,8 @@
                                    } else if ([key isEqualToString:@"NSFont"]) {
                                        CTFontRef font = CTFontCreateWithName((__bridge CFStringRef)[obj fontName], [obj pointSize], NULL);
                                        [normalized addAttribute:(NSString *)kCTFontAttributeName value:(__bridge id)font range:range];
+                                   } else if ([key isEqualToString:@"NSBackgroundColor"]) {
+                                       // There's no NSBackgroundColorAttributeName equivalent for iOS5
                                    } else if ([key isEqualToString:@"NSParagraphStyle"]) {
                                        
                                        *paragraphStyle = obj;

@@ -23,6 +23,7 @@
                                     <attributedString key="attributedText">
                                         <fragment content="Connect">
                                             <attributes>
+                                                <color key="NSBackgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" size="17" name="Helvetica-LightOblique"/>
                                                 <font key="NSOriginalFont" size="17" name="Helvetica-LightOblique"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
@@ -64,8 +65,8 @@
                                     <attributedString key="attributedText">
                                         <fragment content="Connect">
                                             <attributes>
+                                                <color key="NSBackgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" size="17" name="Helvetica-LightOblique"/>
-                                                <font key="NSOriginalFont" size="17" name="Helvetica-LightOblique"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                             </attributes>
                                         </fragment>
@@ -91,7 +92,6 @@
                                         <fragment content="account">
                                             <attributes>
                                                 <font key="NSFont" size="17" name="Georgia-Bold"/>
-                                                <font key="NSOriginalFont" size="17" name="Georgia-Bold"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                             </attributes>
                                         </fragment>
