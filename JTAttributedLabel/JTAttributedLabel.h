@@ -7,9 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface JTAttributedLabel : UILabel
 
 @property (nonatomic, copy) NSAttributedString *attributedText;
+
+@end
+
+
+@interface JTTextLayer : CATextLayer
+
+@property(copy) id string;
 
 @end
