@@ -8,6 +8,7 @@
 #warning "This project uses features only available in iOS SDK 5.0 and later."
 #endif
 
+#define SWIZZLE_PARAGRAPHSTYLE 1
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>

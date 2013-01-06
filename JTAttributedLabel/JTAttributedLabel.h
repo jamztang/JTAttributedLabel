@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  JTAttributedLabel.h
 //  JTAttributedLabel
 //
 //  Created by james on 6/1/13.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UITableViewController
+@interface JTAttributedLabel : UILabel
+
+@property (nonatomic, copy) NSAttributedString *attributedText;
 
 @end

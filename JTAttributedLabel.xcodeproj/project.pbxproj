@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A211FB71698D91200196C09 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A211FB61698D91200196C09 /* TTTAttributedLabel.m */; };
+		1A211FB91698D93300196C09 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A211FB81698D93300196C09 /* CoreText.framework */; };
+		1A211FBC1698DAB400196C09 /* JTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A211FBB1698DAB400196C09 /* JTAttributedLabel.m */; };
+		1A3712561698E17F005A3973 /* JTParagraphStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3712551698E17F005A3973 /* JTParagraphStyle.m */; };
+		1A37125A1698E485005A3973 /* UINibDecoderProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3712591698E485005A3973 /* UINibDecoderProxy.m */; };
+		1A3712641698F026005A3973 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3712631698F026005A3973 /* QuartzCore.framework */; };
 		1ABAF56A1698D6C9006BC241 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABAF5691698D6C9006BC241 /* UIKit.framework */; };
 		1ABAF56C1698D6C9006BC241 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABAF56B1698D6C9006BC241 /* Foundation.framework */; };
 		1ABAF56E1698D6C9006BC241 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABAF56D1698D6C9006BC241 /* CoreGraphics.framework */; };
@@ -36,6 +42,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A211FB51698D91200196C09 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
+		1A211FB61698D91200196C09 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
+		1A211FB81698D93300196C09 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		1A211FBA1698DAB400196C09 /* JTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTAttributedLabel.h; sourceTree = "<group>"; };
+		1A211FBB1698DAB400196C09 /* JTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTAttributedLabel.m; sourceTree = "<group>"; };
+		1A3712541698E17F005A3973 /* JTParagraphStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTParagraphStyle.h; sourceTree = "<group>"; };
+		1A3712551698E17F005A3973 /* JTParagraphStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTParagraphStyle.m; sourceTree = "<group>"; };
+		1A3712581698E485005A3973 /* UINibDecoderProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINibDecoderProxy.h; sourceTree = "<group>"; };
+		1A3712591698E485005A3973 /* UINibDecoderProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINibDecoderProxy.m; sourceTree = "<group>"; };
+		1A3712631698F026005A3973 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1ABAF5651698D6C8006BC241 /* JTAttributedLabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JTAttributedLabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ABAF5691698D6C9006BC241 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1ABAF56B1698D6C9006BC241 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -65,6 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A3712641698F026005A3973 /* QuartzCore.framework in Frameworks */,
+				1A211FB91698D93300196C09 /* CoreText.framework in Frameworks */,
 				1ABAF56A1698D6C9006BC241 /* UIKit.framework in Frameworks */,
 				1ABAF56C1698D6C9006BC241 /* Foundation.framework in Frameworks */,
 				1ABAF56E1698D6C9006BC241 /* CoreGraphics.framework in Frameworks */,
@@ -84,9 +102,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A211FB21698D8EB00196C09 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				1A211FB41698D91200196C09 /* TTTAttributedLabel */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		1A211FB41698D91200196C09 /* TTTAttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				1A211FB51698D91200196C09 /* TTTAttributedLabel.h */,
+				1A211FB61698D91200196C09 /* TTTAttributedLabel.m */,
+			);
+			name = TTTAttributedLabel;
+			path = TTTAttributedLabel/TTTAttributedLabel;
+			sourceTree = "<group>";
+		};
 		1ABAF55A1698D6C8006BC241 = {
 			isa = PBXGroup;
 			children = (
+				1A3712631698F026005A3973 /* QuartzCore.framework */,
+				1A211FB81698D93300196C09 /* CoreText.framework */,
+				1A211FB21698D8EB00196C09 /* Libs */,
 				1ABAF56F1698D6C9006BC241 /* JTAttributedLabel */,
 				1ABAF5931698D6C9006BC241 /* JTAttributedLabelTests */,
 				1ABAF5681698D6C9006BC241 /* Frameworks */,
@@ -123,6 +162,12 @@
 				1ABAF5841698D6C9006BC241 /* ViewController.h */,
 				1ABAF5851698D6C9006BC241 /* ViewController.m */,
 				1ABAF5701698D6C9006BC241 /* Supporting Files */,
+				1A211FBA1698DAB400196C09 /* JTAttributedLabel.h */,
+				1A211FBB1698DAB400196C09 /* JTAttributedLabel.m */,
+				1A3712541698E17F005A3973 /* JTParagraphStyle.h */,
+				1A3712551698E17F005A3973 /* JTParagraphStyle.m */,
+				1A3712581698E485005A3973 /* UINibDecoderProxy.h */,
+				1A3712591698E485005A3973 /* UINibDecoderProxy.m */,
 			);
 			path = JTAttributedLabel;
 			sourceTree = "<group>";
@@ -273,6 +318,10 @@
 				1ABAF5761698D6C9006BC241 /* main.m in Sources */,
 				1ABAF57A1698D6C9006BC241 /* AppDelegate.m in Sources */,
 				1ABAF5861698D6C9006BC241 /* ViewController.m in Sources */,
+				1A211FB71698D91200196C09 /* TTTAttributedLabel.m in Sources */,
+				1A211FBC1698DAB400196C09 /* JTAttributedLabel.m in Sources */,
+				1A3712561698E17F005A3973 /* JTParagraphStyle.m in Sources */,
+				1A37125A1698E485005A3973 /* UINibDecoderProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +495,7 @@
 				1ABAF5A01698D6C9006BC241 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1ABAF5A11698D6C9006BC241 /* Build configuration list for PBXNativeTarget "JTAttributedLabelTests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +504,7 @@
 				1ABAF5A31698D6C9006BC241 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
