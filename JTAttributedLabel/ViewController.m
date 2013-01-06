@@ -32,4 +32,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)footerDidPress:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://twitter.com/mystcolor"]];
+}
+
 @end
