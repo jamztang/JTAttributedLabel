@@ -19,9 +19,9 @@
     [title enumerateAttributesInRange:NSMakeRange(0, [title length])
                               options:0
                            usingBlock:^(NSDictionary *attrs, NSRange range, BOOL *stop) {
-                               NSString *text = [[title string] substringWithRange:range];
-                               NSLog(@"%@ %@ %@", text, NSStringFromRange(range), attrs);
-                               
+//                               NSString *text = [[title string] substringWithRange:range];
+//                               NSLog(@"%@ %@ %@", text, NSStringFromRange(range), attrs);
+
                                [attrs enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
                                    if ([key isEqualToString:@"NSColor"]) {
                                        CGColorRef color = [(UIColor *)obj CGColor];

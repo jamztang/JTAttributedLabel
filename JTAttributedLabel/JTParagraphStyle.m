@@ -7,9 +7,12 @@
 //
 
 #import "JTParagraphStyle.h"
-#import "UINibDecoderProxy.h"
 #import <CoreText/CoreText.h>
 #import <objc/runtime.h>
+
+#if JTAttributedLabelDebug
+
+#import "UINibDecoderProxy.h"
 
 void SwizzleInstanceMethod(Class c, SEL orig, SEL new)
 {
@@ -34,7 +37,7 @@ void SwizzleClassMethod(Class c, SEL orig, SEL new) {
         method_exchangeImplementations(origMethod, newMethod);
 }
 
-@implementation NSParagraphStyle (Private)
+@implementation NSParagraphStyle (JTParagraphStyleDebug)
 
 + (void)load {
     SwizzleInstanceMethod([self class], @selector(initWithCoder:), @selector(initWithCoderSwizzled:));
@@ -47,11 +50,12 @@ void SwizzleClassMethod(Class c, SEL orig, SEL new) {
 
 @end
 
+#endif
+
 
 @implementation JTParagraphStyle
 
 + (void)load {
-#if SWIZZLE_PARAGRAPHSTYLE
     if( ! NSClassFromString(@"NSParagraphStyle") ){
         objc_registerClassPair(objc_allocateClassPair([JTParagraphStyle class], "NSParagraphStyle", 0));
     }
@@ -59,7 +63,6 @@ void SwizzleClassMethod(Class c, SEL orig, SEL new) {
     if( ! NSClassFromString(@"NSMutableParagraphStyle") ){
         objc_registerClassPair(objc_allocateClassPair([JTMutableParagraphStyle class], "NSMutableParagraphStyle", 0));
     }
-#endif
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder {

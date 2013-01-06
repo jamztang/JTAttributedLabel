@@ -7,20 +7,35 @@
 //
 
 #import "JTAttributedLabel.h"
-#import "UINibDecoderProxy.h"
 #import "NSAttributedString+JTiOS5Compatibility.h"
+#import <objc/runtime.h>
+
+#if JTAttributedLabelDebug
+
+#import "UINibDecoderProxy.h"
+
+#endif
 
 @implementation JTAttributedLabel
 @synthesize attributedText = _attributedText;
+
++ (void)load {
+    if( ! [UILabel instancesRespondToSelector:@selector(attributedText)] ){
+        objc_registerClassPair(objc_allocateClassPair([JTAttributedLabel class], "JTAutoLabel", 0));
+    }
+}
 
 + (Class)layerClass {
     return [JTTextLayer class];
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
-   self = [super initWithCoder:(id)[[UINibDecoderProxy alloc] initWithTarget:aDecoder]];
 
-//    self = [super initWithCoder:aDecoder];
+#if JTAttributedLabelDebug
+    self = [super initWithCoder:(id)[[UINibDecoderProxy alloc] initWithTarget:aDecoder]];
+#else
+    self = [super initWithCoder:aDecoder];
+#endif
 
     self.attributedText = [aDecoder decodeObjectForKey:@"UIAttributedText"];
 

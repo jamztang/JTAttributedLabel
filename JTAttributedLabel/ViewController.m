@@ -15,9 +15,6 @@
 
 @interface ViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *label;
-@property (weak, nonatomic) IBOutlet UIView *textLayerReferenceView;
-
 @end
 
 @implementation ViewController

@@ -15,9 +15,14 @@
 
 @end
 
-
 @interface JTTextLayer : CATextLayer
 
 @property(copy) id string;
+
+@end
+
+// JTAutoLabel in iOS 6 uses the original UILabel
+// iOS 5 uses JTAttributedLabel
+@interface JTAutoLabel : UILabel
 
 @end

@@ -42,11 +42,12 @@
 @end
 
 
-@interface JTParagraphStyle (ToBeImplemented) <NSCopying, NSMutableCopying>
+@interface JTParagraphStyle (Unimplemented) <NSCopying, NSMutableCopying>
 
 @end
 
 
+// JTMutableParagraphStyle is not tested.
 @interface JTMutableParagraphStyle : JTParagraphStyle
 
 @property(readwrite) CGFloat lineSpacing;
