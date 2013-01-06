@@ -27,11 +27,21 @@
     return self;
 }
 
+- (void)awakeFromNib {
+    // Fix black layout if UILabel.backgroundColor is specified
+    self.layer.backgroundColor = self.backgroundColor.CGColor;
+    self.layer.opaque = NO;
+}
+
 - (void)setAttributedText:(NSAttributedString *)attributedText {
     _attributedText = [attributedText copy];
 
     JTTextLayer *textLayer = (JTTextLayer *)self.layer;
     textLayer.string = _attributedText;
+}
+
+- (void)drawTextInRect:(CGRect)rect {
+    // Do nothing
 }
 
 @end
