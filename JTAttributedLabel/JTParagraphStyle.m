@@ -64,24 +64,38 @@ void SwizzleClassMethod(Class c, SEL orig, SEL new) {
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super init];
+
+    _lineSpacing            = [aDecoder decodeDoubleForKey:@"NSLineSpacing"];
+    _paragraphSpacing       = [aDecoder decodeDoubleForKey:@"NSParagraphSpacing"];
     _alignment              = [aDecoder decodeIntegerForKey:@"NSAlignment"];
-    _lineBreakMode          = [aDecoder decodeIntegerForKey:@"NSLineBreakMode"];
-    _lineSpacing            = [aDecoder decodeIntegerForKey:@"NSLineSpacing"];
-    _paragraphSpacing       = [aDecoder decodeIntegerForKey:@"NSParagraphSpacing"];
-    _firstLineHeadIndent    = [aDecoder decodeDoubleForKey:@"NSFirstLineHeadIndent"];
     _headIndent             = [aDecoder decodeDoubleForKey:@"NSHeadIndent"];
     _tailIndent             = [aDecoder decodeDoubleForKey:@"NSTailIndent"];
+    _firstLineHeadIndent    = [aDecoder decodeDoubleForKey:@"NSFirstLineHeadIndent"];
+    _minimumLineHeight      = [aDecoder decodeDoubleForKey:@"NSMinLineHeight"];
+    _maximumLineHeight      = [aDecoder decodeDoubleForKey:@"NSMaxLineHeight"];
+    _lineBreakMode          = [aDecoder decodeIntegerForKey:@"NSLineBreakMode"];
+    _baseWritingDirection   = [aDecoder decodeIntegerForKey:@"NSWritingDirection"];
+    _lineHeightMultiple     = [aDecoder decodeDoubleForKey:@"NSLineHeightMultiple"];
+    _paragraphSpacingBefore = [aDecoder decodeDoubleForKey:@"NSParagraphSpacingBefore"];
+    _hyphenationFactor      = [aDecoder decodeFloatForKey:@"NSHyphenationFactor"];
+
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeDouble:_lineSpacing forKey:@"NSLineSpacing"];
+    [aCoder encodeDouble:_paragraphSpacing forKey:@"NSParagraphSpacing"];
     [aCoder encodeInteger:_alignment forKey:@"NSAlignment"];
-    [aCoder encodeInteger:_lineBreakMode forKey:@"NSLineBreakMode"];
-    [aCoder encodeInteger:_paragraphSpacing forKey:@"NSParagraphSpacing"];
-    [aCoder encodeInteger:_firstLineHeadIndent forKey:@"NSFirstLineHeadIndent"];
-    [aCoder encodeDouble:_firstLineHeadIndent forKey:@"NSFirstLineHeadIndent"];
     [aCoder encodeDouble:_headIndent forKey:@"NSHeadIndent"];
     [aCoder encodeDouble:_tailIndent forKey:@"NSTailIndent"];
+    [aCoder encodeDouble:_firstLineHeadIndent forKey:@"NSFirstLineHeadIndent"];
+    [aCoder encodeDouble:_minimumLineHeight forKey:@"NSMinLineHeight"];
+    [aCoder encodeDouble:_maximumLineHeight forKey:@"NSMaxLineHeight"];
+    [aCoder encodeInteger:_lineBreakMode forKey:@"NSLineBreakMode"];
+    [aCoder encodeInteger:_baseWritingDirection forKey:@"NSWritingDirection"];
+    [aCoder encodeDouble:_lineHeightMultiple forKey:@"NSLineHeightMultiple"];
+    [aCoder encodeDouble:_paragraphSpacingBefore forKey:@"NSParagraphSpacingBefore"];
+    [aCoder encodeFloat:_hyphenationFactor forKey:@"NSHyphenationFactor"];
 }
 
 - (NSDictionary *)attr {
