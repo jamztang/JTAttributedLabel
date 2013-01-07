@@ -1,14 +1,16 @@
 JTAttributedLabel
 =================
 
-Ported back NSAttributeString in iOS 5 for you to create rich text UILabels in Interface Builder. (experimental)
+Ported back NSAttributeString in iOS 5 for you to use **Attributed UILabel in Interface Builder.** (experimental)
+
+<img src=https://github.com/mystcolor/JTAttributedLabel/raw/master/attributesPanel.png></img>
 
 Lesson
 ------
 
 [NSAttributedString UIKit Additions](http://developer.apple.com/library/ios/#documentation/uikit/reference/NSAttributedString_UIKit_Additions/Reference/Reference.html) is newly introduced in iOS 6. There it gives the power to developers to specifiy NSAttributedString into common UI elements such as UILabel, UIButton, etc, without digging into complex CoreText APIs.
 
-While there are already out there a few libraries such as [TTTAttributedLabel](https://github.com/mattt/TTTAttributedLabel), [RTLabel](https://github.com/honcheng/RTLabel), etc. I couldn't really find one bridging back the missing piece - **to let us able to use the Xcode provieded rich text editing tool directly in Interface Builder for iOS 5.** And here the JTAttributedLabel is the project trying to port back the missing part.
+While there are already out there a few libraries such as [TTTAttributedLabel](https://github.com/mattt/TTTAttributedLabel), [RTLabel](https://github.com/honcheng/RTLabel), [OHAttributedLabel](https://github.com/AliSoftware/OHAttributedLabel), etc. All of them are quite powerful yet support various kinds of markups, but I couldn't find one bridging back the missing piece - **to support direct specifying NSAttributedString to UILabel in Interface Builder for iOS 5.** And here the JTAttributedLabel is the project trying to port back the missing part.
 
 In Interface Builder, if you specify an NSAttributedString in UILabel, the SDK is clever enough to make your view configuration compatible with iOS 5, but returns to a plain text layout.
 
@@ -74,4 +76,5 @@ Enjoy and please feel free to fork and comments!
 
 JTAttributedLabel is under MIT LICENSE
 Made by James Tang [@mystcolor](http://www.twitter.com/mystcolor)
+
 
