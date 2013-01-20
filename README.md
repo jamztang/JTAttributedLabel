@@ -52,12 +52,16 @@ Demo
 <img src=https://github.com/mystcolor/JTAttributedLabel/raw/master/demo1.png></img>
 <img src=https://github.com/mystcolor/JTAttributedLabel/raw/master/knownissue.png></img>
 
+Updates
+-------
+
+- Vertical text center alignment (21 Jan 2013)
+
 
 Known Issues
 ------------
 
 - No text highlighting
-- No center vertical text alignment (always at top)
 - No StrikeThrough effect
 - Text are not interactable, which is probably a good custom feature but I don't have any plans to support it at the moment.
 

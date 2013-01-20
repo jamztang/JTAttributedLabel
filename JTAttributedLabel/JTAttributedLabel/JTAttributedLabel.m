@@ -115,4 +115,13 @@
     }
 }
 
+- (void)drawInContext:(CGContextRef)ctx {
+    // Transform the context to draw text at vertical center
+    CGFloat padding = roundf((self.frame.size.height - self.preferredFrameSize.height)/2);
+    CGContextSaveGState(ctx);
+    CGContextTranslateCTM(ctx, 0, padding);
+    [super drawInContext:ctx];
+    CGContextRestoreGState(ctx);
+}
+
 @end
