@@ -113,6 +113,7 @@
         
         self.alignmentMode = alignmentMode;
     }
+    [super setString:_string];
 }
 
 - (void)drawInContext:(CGContextRef)ctx {
