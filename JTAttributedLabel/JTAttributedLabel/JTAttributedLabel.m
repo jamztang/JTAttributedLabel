@@ -50,45 +50,15 @@
     [(CATextLayer *)self.layer setWrapped:YES];
 }
 
-- (void)setAttributedText:(NSAttributedString *)attributedText {
-    _attributedText = [attributedText copy];
-
+- (void)setAttributedText:(NSAttributedString *)string {
+    
     JTTextLayer *textLayer = (JTTextLayer *)self.layer;
-    textLayer.string = _attributedText;
-}
 
-- (void)drawTextInRect:(CGRect)rect {
-    // Do nothing
-}
-
-- (CGSize)sizeThatFits:(CGSize)size {
-    if (self.attributedText) {
-//        CGFloat height = [self.attributedText boundingHeightForWidth:size.width];
-//        CGFloat width = size.height;
-//        return CGSizeMake(width, height);
-        return [self.layer preferredFrameSize];
-    }
-    return [super sizeThatFits:size];
-}
-
-@end
-
-
-@implementation JTTextLayer {
-    CGSize _suggestedSize;
-}
-
-@synthesize string = _string;
-
-- (id)string {
-    return _string;
-}
-
-- (void)setString:(id)string {
     if ([string isKindOfClass:[NSAttributedString class]]) {
-        NSParagraphStyle *paragraphStyle = nil;
-        _string = [string iOS5AttributedStringWithParagraphStyle:&paragraphStyle];
 
+        NSParagraphStyle *paragraphStyle = nil;
+        _attributedText = [string iOS5AttributedStringWithParagraphStyle:&paragraphStyle];
+        
         NSString *alignmentMode = nil;
         switch (paragraphStyle.alignment) {
             case NSTextAlignmentRight:
@@ -112,7 +82,7 @@
 #if TARGET_IPHONE_SIMULATOR
         if ( ! [UILabel instancesRespondToSelector:@selector(attributedText)]) {
             // iOS 5 simulator
-
+            
             switch (paragraphStyle.alignment) {
                 case NSTextAlignmentRight:
                     alignmentMode = kCAAlignmentCenter;
@@ -126,16 +96,34 @@
         }
 #endif
         
-        self.alignmentMode = alignmentMode;
+        [textLayer setAlignmentMode:alignmentMode];
     }
-    [super setString:_string];
+
+    textLayer.string = _attributedText;
 }
+
+- (void)drawTextInRect:(CGRect)rect {
+    // Do nothing
+}
+
+- (CGSize)sizeThatFits:(CGSize)size {
+    if (self.attributedText) {
+        return [self.attributedText boundingSizeForSize:size];
+//        return [self.layer preferredFrameSize];
+    }
+    return [super sizeThatFits:size];
+}
+
+@end
+
+
+@implementation JTTextLayer
 
 - (void)drawInContext:(CGContextRef)ctx {
     // Transform the context to draw text at vertical center
     
     CGFloat height = self.preferredFrameSize.height;
-    
+
     if ([self.string isKindOfClass:[NSAttributedString class]]) {
         // We use CoreText to calculate the bounds text height instead of
         // depending on CATextLayer's version, which seems isn't reliable
@@ -143,8 +131,6 @@
     }
     
     CGFloat padding = roundf((self.frame.size.height - height)/2);
-    
-//    NSLog(@"padding %f, frameSize %@, preferredFrameSize %@", padding, NSStringFromCGRect(self.frame), NSStringFromCGSize(self.preferredFrameSize));
     
     CGContextSaveGState(ctx);
     CGContextTranslateCTM(ctx, 0, padding);

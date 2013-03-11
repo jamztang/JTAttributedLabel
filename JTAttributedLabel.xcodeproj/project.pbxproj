@@ -29,6 +29,8 @@
 		1AE59FEE16998F1D005F72C5 /* JTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE59FE616998F1D005F72C5 /* JTAttributedLabel.m */; };
 		1AE59FEF16998F1D005F72C5 /* JTParagraphStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE59FE816998F1D005F72C5 /* JTParagraphStyle.m */; };
 		1AE59FF016998F1D005F72C5 /* NSAttributedString+JTiOS5Compatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE59FEA16998F1D005F72C5 /* NSAttributedString+JTiOS5Compatibility.m */; };
+		1AFBCFAB16EE22040092E866 /* JTAttributedLabelTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFBCFA716EE1D7E0092E866 /* JTAttributedLabelTestViewController.m */; };
+		1AFBCFAC16EE22040092E866 /* JTAttributedLabelTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AFBCFA816EE1D7E0092E866 /* JTAttributedLabelTestViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,9 @@
 		1AE59FE816998F1D005F72C5 /* JTParagraphStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTParagraphStyle.m; sourceTree = "<group>"; };
 		1AE59FE916998F1D005F72C5 /* NSAttributedString+JTiOS5Compatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+JTiOS5Compatibility.h"; sourceTree = "<group>"; };
 		1AE59FEA16998F1D005F72C5 /* NSAttributedString+JTiOS5Compatibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+JTiOS5Compatibility.m"; sourceTree = "<group>"; };
+		1AFBCFA616EE1D7E0092E866 /* JTAttributedLabelTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTAttributedLabelTestViewController.h; sourceTree = "<group>"; };
+		1AFBCFA716EE1D7E0092E866 /* JTAttributedLabelTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTAttributedLabelTestViewController.m; sourceTree = "<group>"; };
+		1AFBCFA816EE1D7E0092E866 /* JTAttributedLabelTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JTAttributedLabelTestViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +191,9 @@
 				1ABAF5991698D6C9006BC241 /* JTAttributedLabelTests.h */,
 				1ABAF59A1698D6C9006BC241 /* JTAttributedLabelTests.m */,
 				1ABAF5941698D6C9006BC241 /* Supporting Files */,
+				1AFBCFA616EE1D7E0092E866 /* JTAttributedLabelTestViewController.h */,
+				1AFBCFA716EE1D7E0092E866 /* JTAttributedLabelTestViewController.m */,
+				1AFBCFA816EE1D7E0092E866 /* JTAttributedLabelTestViewController.xib */,
 			);
 			path = JTAttributedLabelTests;
 			sourceTree = "<group>";
@@ -288,6 +296,7 @@
 				1ABAF57E1698D6C9006BC241 /* Default@2x.png in Resources */,
 				1ABAF5801698D6C9006BC241 /* Default-568h@2x.png in Resources */,
 				1ABAF5831698D6C9006BC241 /* MainStoryboard.storyboard in Resources */,
+				1AFBCFAC16EE22040092E866 /* JTAttributedLabelTestViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +338,7 @@
 				1AE59FEF16998F1D005F72C5 /* JTParagraphStyle.m in Sources */,
 				1AE59FF016998F1D005F72C5 /* NSAttributedString+JTiOS5Compatibility.m in Sources */,
 				1A0F3153169994E400283FC3 /* UINibDecoderProxy.m in Sources */,
+				1AFBCFAB16EE22040092E866 /* JTAttributedLabelTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

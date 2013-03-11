@@ -46,16 +46,20 @@
 
 - (CGFloat)boundingHeightForWidth:(CGFloat)inWidth
 {
-    NSParagraphStyle *paragraphStyle = nil;
+    return [self boundingSizeForSize:CGSizeMake(inWidth, CGFLOAT_MAX)].height;
+}
 
-    NSAttributedString* attrStrWithLinks = [self iOS5AttributedStringWithParagraphStyle:&paragraphStyle];
-
+- (CGSize)boundingSizeForSize:(CGSize)size {
+//    NSParagraphStyle *paragraphStyle = nil;
+    
+    NSAttributedString* attrStrWithLinks = [self copy];
+    
     CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString((__bridge CFAttributedStringRef)attrStrWithLinks);
-
-    CGSize suggestedSize = CTFramesetterSuggestFrameSizeWithConstraints(framesetter, CFRangeMake(0, 0), NULL, CGSizeMake(inWidth, CGFLOAT_MAX), NULL);
+    
+    CGSize suggestedSize = CTFramesetterSuggestFrameSizeWithConstraints(framesetter, CFRangeMake(0, 0), NULL, size, NULL);
     CFRelease(framesetter);
-
-    return suggestedSize.height;
+    
+    return suggestedSize;
 }
 
 @end
