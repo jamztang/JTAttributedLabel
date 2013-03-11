@@ -26,7 +26,7 @@
                                    if ([key isEqualToString:@"NSColor"]) {
                                        CGColorRef color = [(UIColor *)obj CGColor];
                                        [normalized addAttribute:(NSString *)kCTForegroundColorAttributeName value:(__bridge id)color range:range];
-                                   } else if ([key isEqualToString:@"NSFont"]) {
+                                   } else if ([key isEqualToString:@"NSFont"] && [obj respondsToSelector:@selector(fontName)]) {
                                        CTFontRef font = CTFontCreateWithName((__bridge CFStringRef)[obj fontName], [obj pointSize], NULL);
                                        [normalized addAttribute:(NSString *)kCTFontAttributeName value:(__bridge id)font range:range];
                                    } else if ([key isEqualToString:@"NSUnderline"]) {
@@ -42,6 +42,20 @@
                            }];
 
     return normalized;
+}
+
+- (CGFloat)boundingHeightForWidth:(CGFloat)inWidth
+{
+    NSParagraphStyle *paragraphStyle = nil;
+
+    NSAttributedString* attrStrWithLinks = [self iOS5AttributedStringWithParagraphStyle:&paragraphStyle];
+
+    CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString((__bridge CFAttributedStringRef)attrStrWithLinks);
+
+    CGSize suggestedSize = CTFramesetterSuggestFrameSizeWithConstraints(framesetter, CFRangeMake(0, 0), NULL, CGSizeMake(inWidth, CGFLOAT_MAX), NULL);
+    CFRelease(framesetter);
+
+    return suggestedSize.height;
 }
 
 @end

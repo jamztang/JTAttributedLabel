@@ -46,6 +46,8 @@
     // Fix black layout if UILabel.backgroundColor is specified
     self.layer.backgroundColor = self.backgroundColor.CGColor;
     self.layer.opaque = NO;
+    
+    [(CATextLayer *)self.layer setWrapped:YES];
 }
 
 - (void)setAttributedText:(NSAttributedString *)attributedText {
@@ -59,10 +61,23 @@
     // Do nothing
 }
 
+- (CGSize)sizeThatFits:(CGSize)size {
+    if (self.attributedText) {
+//        CGFloat height = [self.attributedText boundingHeightForWidth:size.width];
+//        CGFloat width = size.height;
+//        return CGSizeMake(width, height);
+        return [self.layer preferredFrameSize];
+    }
+    return [super sizeThatFits:size];
+}
+
 @end
 
 
-@implementation JTTextLayer
+@implementation JTTextLayer {
+    CGSize _suggestedSize;
+}
+
 @synthesize string = _string;
 
 - (id)string {
@@ -118,7 +133,19 @@
 
 - (void)drawInContext:(CGContextRef)ctx {
     // Transform the context to draw text at vertical center
-    CGFloat padding = roundf((self.frame.size.height - self.preferredFrameSize.height)/2);
+    
+    CGFloat height = self.preferredFrameSize.height;
+    
+    if ([self.string isKindOfClass:[NSAttributedString class]]) {
+        // We use CoreText to calculate the bounds text height instead of
+        // depending on CATextLayer's version, which seems isn't reliable
+        height = [(NSAttributedString *)self.string boundingHeightForWidth:self.frame.size.width];
+    }
+    
+    CGFloat padding = roundf((self.frame.size.height - height)/2);
+    
+//    NSLog(@"padding %f, frameSize %@, preferredFrameSize %@", padding, NSStringFromCGRect(self.frame), NSStringFromCGSize(self.preferredFrameSize));
+    
     CGContextSaveGState(ctx);
     CGContextTranslateCTM(ctx, 0, padding);
     [super drawInContext:ctx];

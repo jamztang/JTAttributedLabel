@@ -12,4 +12,6 @@
 
 - (NSAttributedString *)iOS5AttributedStringWithParagraphStyle:(NSParagraphStyle **)paragraphStyle;
 
+- (CGFloat)boundingHeightForWidth:(CGFloat)inWidth;
+
 @end
