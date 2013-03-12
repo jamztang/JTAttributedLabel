@@ -11,8 +11,26 @@
 
 @implementation NSAttributedString (JTiOS5Compatibility)
 
+- (BOOL)needsNormalize {
+    __block BOOL needsNormalize = YES;
+    [self enumerateAttributesInRange:NSMakeRange(0, [self length])
+                              options:0
+                           usingBlock:^(NSDictionary *attrs, NSRange range, BOOL *stop) {
+                               NSArray *allKeys = [attrs allKeys];
+                               if ([allKeys containsObject:(id)kCTForegroundColorAttributeName]) {
+                                   *stop = YES;
+                                   needsNormalize = NO;
+                               }
+                           }];
+    return needsNormalize;
+}
+
 - (NSAttributedString *)iOS5AttributedStringWithParagraphStyle:(NSParagraphStyle *__autoreleasing *)paragraphStyle {
     NSAttributedString *title = self;
+
+    if ( ! [self needsNormalize]) {
+        return self;
+    }
 
     __block NSMutableAttributedString *normalized = [[NSMutableAttributedString alloc] initWithString:title.string];
 
@@ -36,7 +54,27 @@
                                    } else if ([key isEqualToString:@"NSStrikethrough"]) {
                                        // There's no NSStrikethroughStyleAttributeName equivalent for iOS5
                                    } else if ([key isEqualToString:@"NSParagraphStyle"]) {
+                                       /*
+                                       {
+                                           CGFloat lineSpacing = [(NSParagraphStyle *)obj lineSpacing] ?: 10;
+                                           CGFloat paragraphSpacing = [(NSParagraphStyle *)obj paragraphSpacing] ?: 10;
+                                           
+                                           NSLog(@"--- lineSpacing %.0f paragraphSpacing %.0f", lineSpacing, paragraphSpacing);
+                                           const CTParagraphStyleSetting styleSettings[] = {
+                                               {kCTParagraphStyleSpecifierLineSpacing, sizeof(CGFloat), &lineSpacing},
+                                               {kCTParagraphStyleSpecifierParagraphSpacing, sizeof(CGFloat), &paragraphSpacing},
+                                               {kCTParagraphStyleSpecifierMinimumLineSpacing, sizeof(CGFloat), &lineSpacing},
+                                           };
+                                           CTParagraphStyleRef ctParagraphStyle = CTParagraphStyleCreate(styleSettings, 2);
+                                           [normalized addAttribute:(id)kCTParagraphStyleAttributeName
+                                                              value:(__bridge id)ctParagraphStyle range:range];
+                                           CFRelease(ctParagraphStyle);
+                                       }
+                                        */
                                        *paragraphStyle = obj;
+                                   } else {
+                                       // Make sure it doesn't discard already normalized attributes
+                                       [normalized addAttribute:key value:obj range:range];
                                    }
                                }];
                            }];
