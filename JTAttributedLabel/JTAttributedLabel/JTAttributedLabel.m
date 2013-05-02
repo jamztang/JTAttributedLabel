@@ -16,14 +16,20 @@
 
 #endif
 
-@implementation JTAttributedLabel
-@synthesize attributedText = _attributedText;
+@implementation JTAutoLabel
 
-+ (void)load {
-    if( ! [UILabel instancesRespondToSelector:@selector(attributedText)] ){
-        objc_registerClassPair(objc_allocateClassPair([JTAttributedLabel class], "JTAutoLabel", 0));
+- (id)awakeAfterUsingCoder:(NSCoder *)aDecoder {
+    if( ![UILabel instancesRespondToSelector:@selector(attributedText)] ){
+        return (JTAutoLabel *)[[JTAttributedLabel alloc] initWithCoder:aDecoder];
+    } else {
+        return [super awakeAfterUsingCoder:aDecoder];
     }
 }
+
+@end
+
+@implementation JTAttributedLabel
+@synthesize attributedText = _attributedText;
 
 + (Class)layerClass {
     return [JTTextLayer class];
