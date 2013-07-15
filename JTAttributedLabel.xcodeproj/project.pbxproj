@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A0F3153169994E400283FC3 /* UINibDecoderProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0F3152169994E400283FC3 /* UINibDecoderProxy.m */; };
-		1A211FB91698D93300196C09 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A211FB81698D93300196C09 /* CoreText.framework */; };
-		1A3712641698F026005A3973 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3712631698F026005A3973 /* QuartzCore.framework */; };
 		1ABAF56A1698D6C9006BC241 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABAF5691698D6C9006BC241 /* UIKit.framework */; };
 		1ABAF56C1698D6C9006BC241 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABAF56B1698D6C9006BC241 /* Foundation.framework */; };
 		1ABAF56E1698D6C9006BC241 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABAF56D1698D6C9006BC241 /* CoreGraphics.framework */; };
@@ -26,9 +23,7 @@
 		1ABAF5901698D6C9006BC241 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABAF56B1698D6C9006BC241 /* Foundation.framework */; };
 		1ABAF5981698D6C9006BC241 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1ABAF5961698D6C9006BC241 /* InfoPlist.strings */; };
 		1ABAF59B1698D6C9006BC241 /* JTAttributedLabelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAF59A1698D6C9006BC241 /* JTAttributedLabelTests.m */; };
-		1AE59FEE16998F1D005F72C5 /* JTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE59FE616998F1D005F72C5 /* JTAttributedLabel.m */; };
-		1AE59FEF16998F1D005F72C5 /* JTParagraphStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE59FE816998F1D005F72C5 /* JTParagraphStyle.m */; };
-		1AE59FF016998F1D005F72C5 /* NSAttributedString+JTiOS5Compatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE59FEA16998F1D005F72C5 /* NSAttributedString+JTiOS5Compatibility.m */; };
+		595F6EE86C0A4E52A859B1EA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 438C29FB65994DD399B3B032 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,10 +37,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1A0F3151169994E400283FC3 /* UINibDecoderProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINibDecoderProxy.h; sourceTree = "<group>"; };
-		1A0F3152169994E400283FC3 /* UINibDecoderProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINibDecoderProxy.m; sourceTree = "<group>"; };
-		1A211FB81698D93300196C09 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		1A3712631698F026005A3973 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1ABAF5651698D6C8006BC241 /* JTAttributedLabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JTAttributedLabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ABAF5691698D6C9006BC241 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1ABAF56B1698D6C9006BC241 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -68,12 +59,8 @@
 		1ABAF5971698D6C9006BC241 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1ABAF5991698D6C9006BC241 /* JTAttributedLabelTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTAttributedLabelTests.h; sourceTree = "<group>"; };
 		1ABAF59A1698D6C9006BC241 /* JTAttributedLabelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTAttributedLabelTests.m; sourceTree = "<group>"; };
-		1AE59FE516998F1D005F72C5 /* JTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTAttributedLabel.h; sourceTree = "<group>"; };
-		1AE59FE616998F1D005F72C5 /* JTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTAttributedLabel.m; sourceTree = "<group>"; };
-		1AE59FE716998F1D005F72C5 /* JTParagraphStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTParagraphStyle.h; sourceTree = "<group>"; };
-		1AE59FE816998F1D005F72C5 /* JTParagraphStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTParagraphStyle.m; sourceTree = "<group>"; };
-		1AE59FE916998F1D005F72C5 /* NSAttributedString+JTiOS5Compatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+JTiOS5Compatibility.h"; sourceTree = "<group>"; };
-		1AE59FEA16998F1D005F72C5 /* NSAttributedString+JTiOS5Compatibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+JTiOS5Compatibility.m"; sourceTree = "<group>"; };
+		438C29FB65994DD399B3B032 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE3CC37F39684A03883F71BE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +68,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A3712641698F026005A3973 /* QuartzCore.framework in Frameworks */,
-				1A211FB91698D93300196C09 /* CoreText.framework in Frameworks */,
 				1ABAF56A1698D6C9006BC241 /* UIKit.framework in Frameworks */,
 				1ABAF56C1698D6C9006BC241 /* Foundation.framework in Frameworks */,
 				1ABAF56E1698D6C9006BC241 /* CoreGraphics.framework in Frameworks */,
+				595F6EE86C0A4E52A859B1EA /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,33 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1A0F3150169994E400283FC3 /* UINibDecoderProxy */ = {
-			isa = PBXGroup;
-			children = (
-				1A0F3151169994E400283FC3 /* UINibDecoderProxy.h */,
-				1A0F3152169994E400283FC3 /* UINibDecoderProxy.m */,
-			);
-			path = UINibDecoderProxy;
-			sourceTree = "<group>";
-		};
-		1A211FB21698D8EB00196C09 /* Libs */ = {
-			isa = PBXGroup;
-			children = (
-				1A0F3150169994E400283FC3 /* UINibDecoderProxy */,
-			);
-			path = Libs;
-			sourceTree = "<group>";
-		};
 		1ABAF55A1698D6C8006BC241 = {
 			isa = PBXGroup;
 			children = (
-				1A3712631698F026005A3973 /* QuartzCore.framework */,
-				1A211FB81698D93300196C09 /* CoreText.framework */,
-				1A211FB21698D8EB00196C09 /* Libs */,
 				1ABAF56F1698D6C9006BC241 /* JTAttributedLabel */,
 				1ABAF5931698D6C9006BC241 /* JTAttributedLabelTests */,
 				1ABAF5681698D6C9006BC241 /* Frameworks */,
 				1ABAF5661698D6C8006BC241 /* Products */,
+				EE3CC37F39684A03883F71BE /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,6 +115,7 @@
 				1ABAF56B1698D6C9006BC241 /* Foundation.framework */,
 				1ABAF56D1698D6C9006BC241 /* CoreGraphics.framework */,
 				1ABAF58D1698D6C9006BC241 /* SenTestingKit.framework */,
+				438C29FB65994DD399B3B032 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -155,7 +123,6 @@
 		1ABAF56F1698D6C9006BC241 /* JTAttributedLabel */ = {
 			isa = PBXGroup;
 			children = (
-				1AE59FE416998F1D005F72C5 /* JTAttributedLabel */,
 				1ABAF5781698D6C9006BC241 /* AppDelegate.h */,
 				1ABAF5791698D6C9006BC241 /* AppDelegate.m */,
 				1ABAF5811698D6C9006BC241 /* MainStoryboard.storyboard */,
@@ -199,19 +166,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1AE59FE416998F1D005F72C5 /* JTAttributedLabel */ = {
-			isa = PBXGroup;
-			children = (
-				1AE59FE516998F1D005F72C5 /* JTAttributedLabel.h */,
-				1AE59FE616998F1D005F72C5 /* JTAttributedLabel.m */,
-				1AE59FE716998F1D005F72C5 /* JTParagraphStyle.h */,
-				1AE59FE816998F1D005F72C5 /* JTParagraphStyle.m */,
-				1AE59FE916998F1D005F72C5 /* NSAttributedString+JTiOS5Compatibility.h */,
-				1AE59FEA16998F1D005F72C5 /* NSAttributedString+JTiOS5Compatibility.m */,
-			);
-			path = JTAttributedLabel;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -219,9 +173,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1ABAF59E1698D6C9006BC241 /* Build configuration list for PBXNativeTarget "JTAttributedLabel" */;
 			buildPhases = (
+				57B13ACAFDD746408FD50A3B /* Check Pods Manifest.lock */,
 				1ABAF5611698D6C8006BC241 /* Sources */,
 				1ABAF5621698D6C8006BC241 /* Frameworks */,
 				1ABAF5631698D6C8006BC241 /* Resources */,
+				1E26C05605E04DA19DBD321E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -315,6 +271,36 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		1E26C05605E04DA19DBD321E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57B13ACAFDD746408FD50A3B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -325,10 +311,6 @@
 				1ABAF5761698D6C9006BC241 /* main.m in Sources */,
 				1ABAF57A1698D6C9006BC241 /* AppDelegate.m in Sources */,
 				1ABAF5861698D6C9006BC241 /* ViewController.m in Sources */,
-				1AE59FEE16998F1D005F72C5 /* JTAttributedLabel.m in Sources */,
-				1AE59FEF16998F1D005F72C5 /* JTParagraphStyle.m in Sources */,
-				1AE59FF016998F1D005F72C5 /* NSAttributedString+JTiOS5Compatibility.m in Sources */,
-				1A0F3153169994E400283FC3 /* UINibDecoderProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +411,7 @@
 		};
 		1ABAF59F1698D6C9006BC241 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE3CC37F39684A03883F71BE /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JTAttributedLabel/JTAttributedLabel-Prefix.pch";
@@ -440,6 +423,7 @@
 		};
 		1ABAF5A01698D6C9006BC241 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE3CC37F39684A03883F71BE /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JTAttributedLabel/JTAttributedLabel-Prefix.pch";
