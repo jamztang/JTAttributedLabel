@@ -2,13 +2,13 @@ PODS:
   - JTAttributedLabel (0.1)
 
 DEPENDENCIES:
-  - JTAttributedLabel (from `/Users/blake/Projects/JTAttributedLabel`)
+  - JTAttributedLabel (from `/Users/james/github/JTAttributedLabel`)
 
 EXTERNAL SOURCES:
   JTAttributedLabel:
-    :path: /Users/blake/Projects/JTAttributedLabel
+    :path: /Users/james/github/JTAttributedLabel
 
 SPEC CHECKSUMS:
   JTAttributedLabel: 16fa0831b3da3349278ab6384ba6d4bde3194bda
 
-COCOAPODS: 0.22.2
+COCOAPODS: 0.22.3
