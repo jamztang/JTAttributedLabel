@@ -10,12 +10,6 @@
 #import "NSAttributedString+JTiOS5Compatibility.h"
 #import <objc/runtime.h>
 
-#if JTAttributedLabelDebug
-
-#import "UINibDecoderProxy.h"
-
-#endif
-
 @implementation JTAutoLabel
 
 - (id)awakeAfterUsingCoder:(NSCoder *)aDecoder {
@@ -37,11 +31,20 @@
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
 
-#if JTAttributedLabelDebug
-    self = [super initWithCoder:(id)[[UINibDecoderProxy alloc] initWithTarget:aDecoder]];
-#else
-    self = [super initWithCoder:aDecoder];
-#endif
+    //
+    // UINibDecoderProxy is a helper class for debugging NSCoder
+    // it's avaliable at https://gist.github.com/mystcolor/4466616
+    //
+    Class proxyClass = NSClassFromString(@"UINibDecoderProxy");
+    
+    id proxy;
+    if (proxyClass) {
+        proxy = [[proxyClass alloc] performSelector:@selector(initWithTarget:) withObject:aDecoder];
+    } else {
+        proxy = aDecoder;
+    }
+    
+    self = [super initWithCoder:proxy];
 
     self.attributedText = [aDecoder decodeObjectForKey:@"UIAttributedText"];
 

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A0F3153169994E400283FC3 /* UINibDecoderProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0F3152169994E400283FC3 /* UINibDecoderProxy.m */; };
 		1A211FB91698D93300196C09 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A211FB81698D93300196C09 /* CoreText.framework */; };
 		1A3712641698F026005A3973 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3712631698F026005A3973 /* QuartzCore.framework */; };
 		1ABAF56A1698D6C9006BC241 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABAF5691698D6C9006BC241 /* UIKit.framework */; };
@@ -42,8 +41,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1A0F3151169994E400283FC3 /* UINibDecoderProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINibDecoderProxy.h; sourceTree = "<group>"; };
-		1A0F3152169994E400283FC3 /* UINibDecoderProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINibDecoderProxy.m; sourceTree = "<group>"; };
 		1A211FB81698D93300196C09 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		1A3712631698F026005A3973 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1ABAF5651698D6C8006BC241 /* JTAttributedLabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JTAttributedLabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,19 +99,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1A0F3150169994E400283FC3 /* UINibDecoderProxy */ = {
-			isa = PBXGroup;
-			children = (
-				1A0F3151169994E400283FC3 /* UINibDecoderProxy.h */,
-				1A0F3152169994E400283FC3 /* UINibDecoderProxy.m */,
-			);
-			path = UINibDecoderProxy;
-			sourceTree = "<group>";
-		};
 		1A211FB21698D8EB00196C09 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				1A0F3150169994E400283FC3 /* UINibDecoderProxy */,
 			);
 			path = Libs;
 			sourceTree = "<group>";
@@ -328,7 +315,6 @@
 				1AE59FEE16998F1D005F72C5 /* JTAttributedLabel.m in Sources */,
 				1AE59FEF16998F1D005F72C5 /* JTParagraphStyle.m in Sources */,
 				1AE59FF016998F1D005F72C5 /* NSAttributedString+JTiOS5Compatibility.m in Sources */,
-				1A0F3153169994E400283FC3 /* UINibDecoderProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
