@@ -31,6 +31,12 @@ So its in different data structure than the CoreText compliment. I realized I ha
 So after all that, I create a subclass of `UILabel` with a `CATextLayer` to layout the NSAttributeString. And now we've a light weight but imperfect implementation.
 
 
+Usage (Cocoapods)
+-----------------
+
+Install via Cocoapods, thanks [blakewatters](https://github.com/blakewatters/) for making it happen!
+
+
 Usage
 -----
 
